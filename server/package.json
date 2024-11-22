@@ -13,5 +13,8 @@
     "api"
   ],
   "author": "Victor Vasconcelos",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^5.1.0"
+  }
 }
