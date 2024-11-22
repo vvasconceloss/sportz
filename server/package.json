@@ -1,0 +1,17 @@
+{
+  "name": "sportz-server",
+  "version": "1.0.0",
+  "description": "server to consume the API from rapidapi.com (free-api-live-football-data)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "node",
+    "server",
+    "api"
+  ],
+  "author": "Victor Vasconcelos",
+  "license": "MIT"
+}
