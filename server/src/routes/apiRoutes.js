@@ -6,9 +6,9 @@ const routes = (fastify) => {
 
     try {
       const apiData = await fetchExternalData(path, request.query);
-      response.status(200).send({ success: apiData });
+      return apiData;
     } catch (requestError) {
-      response.status(500).send({ error: `Error receiving route data: ${requestError.message}` });
+      return console.error(`Error receiving route data: ${requestError.message}`);
     }
   });
 }
