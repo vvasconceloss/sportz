@@ -11,8 +11,17 @@ export const fetchExternalData = async (path, query) => {
         'x-rapidapi-host': process.env.EXTERNAL_API_HOST
       }
     });
-    return responseData.data;
+    return {
+      success: true,
+      data: responseData.data,
+      error: null,
+    };
   } catch (requestError) {
-    return console.error(`Failed to access data from external API: ${requestError}`);
+    console.error(`Failed to access data from external API: ${requestError}`);
+    return {
+      success: false,
+      data: null,
+      error: requestError
+    };
   }
 }

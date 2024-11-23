@@ -14,14 +14,13 @@ export const HeaderStyled = styled('header', {
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'row',
-  padding: '1.0rem 1.5rem',
+  padding: '0.5rem 1.0rem',
   justifyContent: 'center',
   borderBottom: `0.1rem solid ${theme.colors.blackTwo}`,
 });
 
 export const HeaderLogoContainer = styled('div', {
   display: 'flex',
-  position: 'fixed',
   alignItems: 'center',
 });
 
