@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import SportzImageLogo from '../../assets/sportz.png';
+import { useEffect, useState } from 'react';
 import { 
   AsideContainer, 
   AsideLeagues, 
@@ -8,20 +8,30 @@ import {
   LeagueImage, 
   LeagueTitle, 
   LinkStyled } from "./asidePopularLeagues.styles.js";
+import { getPopularLeagues } from '../../services/leaguesApi.js';
 
 export const AsidePopularLeagues = () => {
-  let leagues = ['Champions League', 'LaLiga', 'Bundesliga', 'Premier League', 'Premier League', 'Premier League',  'Premier League'];
+  const [popularLeagues, setPopularLeagues] = useState([]);
+
+  const definePopularLeagues = async () => {
+    const responseData = await getPopularLeagues();
+    setPopularLeagues(responseData.leagues);
+  }
+
+  useEffect(() => {
+    definePopularLeagues();
+  }, [])
 
   return (
     <AsideContainer>
       <AsideTitle>Popular Leagues</AsideTitle>
       <AsideLeagues>
         {
-          leagues.map((league, key) => (
-            <Link className={LinkStyled()} to={'/'}>
-              <League key={key}>
-                <LeagueImage src={SportzImageLogo} />
-                <LeagueTitle>{league}</LeagueTitle>
+          popularLeagues?.map((league) => (
+            <Link className={LinkStyled()} to={'/'} key={league.id}>
+              <League>
+                <LeagueImage src={league.logo} />
+                <LeagueTitle>{league.name}</LeagueTitle>
               </League>
             </Link>
           ))
