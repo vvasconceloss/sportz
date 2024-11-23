@@ -7,7 +7,7 @@ import {
   League, 
   LeagueImage, 
   LeagueTitle, 
-  LinkStyled } from "./asidePopuarLeague.styles";
+  LinkStyled } from "./asidePopularLeagues.styles.js";
 
 export const AsidePopularLeagues = () => {
   let leagues = ['Champions League', 'LaLiga', 'Bundesliga', 'Premier League', 'Premier League', 'Premier League',  'Premier League'];
