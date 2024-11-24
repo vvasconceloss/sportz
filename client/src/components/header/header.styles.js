@@ -6,11 +6,10 @@ export const DefaultContainer = styled('div', {
   width: '100%',
   display: 'flex',
   padding: '0.5rem',
-  alignItems: 'center',
+  alignItems: 'center'
 });
 
 export const HeaderStyled = styled('header', {
-  width: '100%',
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'row',
@@ -37,10 +36,10 @@ export const HeaderTitle = styled('h1', {
 });
 
 export const HeaderLinkNav = styled('nav', {
-  width: '100%',
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center',
+  marginLeft: '2.0rem',
+  justifyContent: 'center'
 });
 
 export const LinkStyled = css({
