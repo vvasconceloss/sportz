@@ -23,17 +23,24 @@ export const AsideTransfers = styled('div', {
 export const Transfer = styled('div', {
   display: 'flex',
   margin: '0.9rem 0',
+  cursor: 'pointer',
   borderRadius: '0.5rem',
   flexDirection: 'column',
+  transform: 'scale(1)',
+  transition: '.5s ease all',
   backgroundColor: theme.colors.blackTwo,
-  borderBottom: `0.2rem solid ${theme.colors.primary}`
+  borderBottom: `0.2rem solid ${theme.colors.blackThree}`,
+  '&:hover': {
+    transform: 'scale(1.1)',
+    borderBottom: `0.2rem solid ${theme.colors.primary}`,
+  }
 });
 
 export const TransferTop = styled('div', {
   display: 'flex',
   padding: '0.5rem',
   alignItems: 'center',
-  borderBottom: `0.1rem solid ${theme.colors.primary}`
+  borderBottom: `0.1rem solid ${theme.colors.blackThree}`
 });
 
 export const TransferHeader = styled('div', {
@@ -43,7 +50,7 @@ export const TransferHeader = styled('div', {
   borderTopLeftRadius: '0.5rem',
   borderTopRightRadius: '0.5rem',
   justifyContent: 'space-between',
-  backgroundColor: theme.colors.primary
+  backgroundColor: theme.colors.blackThree
 });
 
 export const TransferInfo = styled('div', {
