@@ -3,6 +3,7 @@ import { AsidePopularLeagues } from "../components/asidePopularLeagues/asidePopu
 import { 
   HomeContainer, 
   MainStyled } from "../styles/home.styles.js";
+import { AsideTopTransfers } from "../components/asideTopTransfers/asideTopTransfers.jsx";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <AsidePopularLeagues />
       <MainStyled>
       </MainStyled>
+      <AsideTopTransfers />
     </HomeContainer>
     </>
   );
