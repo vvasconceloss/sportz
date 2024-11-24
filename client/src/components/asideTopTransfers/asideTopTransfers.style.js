@@ -22,10 +22,11 @@ export const AsideTransfers = styled('div', {
 
 export const Transfer = styled('div', {
   display: 'flex',
-  margin: '1.0rem 0',
+  margin: '0.9rem 0',
   borderRadius: '0.5rem',
   flexDirection: 'column',
-  backgroundColor: theme.colors.blackTwo
+  backgroundColor: theme.colors.blackTwo,
+  borderBottom: `0.2rem solid ${theme.colors.primary}`
 });
 
 export const TransferTop = styled('div', {
@@ -33,7 +34,17 @@ export const TransferTop = styled('div', {
   padding: '0.5rem',
   alignItems: 'center',
   borderBottom: `0.1rem solid ${theme.colors.primary}`
-})
+});
+
+export const TransferHeader = styled('div', {
+  display: 'flex',
+  padding: '0.5rem',
+  alignItems: 'center',
+  borderTopLeftRadius: '0.5rem',
+  borderTopRightRadius: '0.5rem',
+  justifyContent: 'space-between',
+  backgroundColor: theme.colors.primary
+});
 
 export const TransferInfo = styled('div', {
   display: 'flex',
@@ -42,15 +53,16 @@ export const TransferInfo = styled('div', {
 });
 
 export const PlayerImage = styled('img', {
-  width: '5.0rem',
-  height: '5.0rem',
+  width: '4.0rem',
+  height: '4.0rem',
 });
 
 export const PlayerTransferInfo = styled('div', {
+  width: '100%',
   display: 'flex',
   padding: '0.5rem',
   alignItems: 'center',
-  justifyContent: 'space-around'
+  justifyContent: 'space-between'
 })
 
 export const PlayerDetails = styled('h3', {
@@ -59,6 +71,11 @@ export const PlayerDetails = styled('h3', {
 });
 
 export const PlayerClubLogo = styled('img', {
-  width: '3.5rem',
-  height: '3.5rem',
-})
+  width: '2.5rem',
+  height: '2.5rem',
+});
+
+export const ClubImages = styled('div', {
+  display: 'flex',
+  alignItems: 'center'
+});
