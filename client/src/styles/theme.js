@@ -5,6 +5,7 @@ export const { styled, css, theme, createTheme } = createStitches({
     colors: {
       blackOne: '#151517',
       blackTwo: '#242425',
+      blackThree: '#2E2E2E',
       text: '#FFFFFF',
       primary: '#FF2729',
     },
